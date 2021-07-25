@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: url(./images/bg.png);
+    background-size: 100% 100%;
+}
+.gameOver{
+    visibility: hidden;
+    position: relative;
+    top: 63px;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#score{
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    font-size: 2.5rem;
+    border: 2px black solid;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.dino{
+    background: url(./images/dino.png);
+    height: 110px;
+    width: 215px;
+    position: absolute;
+    bottom: 0;
+    left: 40px;
+    background-size: cover;
+}
+.dragon{
+    background: url(./images/dragon.png);
+    height: 120px;
+    width: 180px;
+    position: absolute;
+    bottom: 0;
+    right: 20vw;
+    background-size: cover;
+}
+.animationDino{
+    animation: dino 1.4s linear;
+}
+.dragonAnimaton{
+    animation: obstacle infinite 4s linear;
+}
+@keyframes dino {
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 400px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
+@keyframes obstacle {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -20vw;
+    }
+}
